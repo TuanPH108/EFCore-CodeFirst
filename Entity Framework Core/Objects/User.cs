@@ -15,9 +15,10 @@ namespace Entity_Framework_Core.Objects
 
         [Column("email")]
         public String Email { get; set; } = String.Empty;
+
         [Column("user_order_id")]
         public String UserOrderId { get; set; } = string.Empty;
-        [ForeignKey("UserOrderId")]
+
         public ICollection<UserOrder>? UserOrder { get; set; }
     }
 }

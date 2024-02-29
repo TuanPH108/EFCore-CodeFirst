@@ -3,6 +3,7 @@ using System;
 using Entity_Framework_Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Entity_Framework_Core.Migrations
 {
     [DbContext(typeof(EFCoreCodeFirst))]
-    partial class EFCoreCodeFirstModelSnapshot : ModelSnapshot
+    [Migration("20240229065907_PostgreeSample")]
+    partial class PostgreeSample
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

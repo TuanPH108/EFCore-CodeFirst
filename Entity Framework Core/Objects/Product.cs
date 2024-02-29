@@ -23,12 +23,8 @@ namespace Entity_Framework_Core.Objects
         public int Quantity { get; set; }
 
         [Column("discount")]
-        public double Discoint { get; set; }
+        public double Discoint { get; set; } 
 
-        [Column("user_order_product_id")]
-        public String UserOrderProductId { get; set; } = string.Empty;
-
-        [ForeignKey("UserOrderProductId")]
         public UserOrderProduct? UserOrderProduct { get; set; }
     }
 }

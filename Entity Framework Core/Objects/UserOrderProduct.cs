@@ -19,12 +19,14 @@ namespace Entity_Framework_Core.Objects
         [Column("discount")]
         public double Discoint { get; set; }
 
+        [ForeignKey("UserOrder")]
         [Column("user_order_id")]
         public String UserOrderId { get; set; } = string.Empty;
+
+        [ForeignKey("Product")]
         [Column("product_id")]
         public String ProductId { get; set; } = string.Empty;
 
-        [ForeignKey("UserOrderId, ProductId")]
         public UserOrder? UserOrder { get; set; }
         public Product? Product { get; set; }
     }

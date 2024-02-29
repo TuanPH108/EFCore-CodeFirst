@@ -23,15 +23,17 @@ namespace Entity_Framework_Core
                 .HasMany(s => s.UserOrder)
                 .WithOne(s => s.User);
 
-            //// 1 Product - 1 User Order Product
-            //_ = modelBuilder.Entity<Product>()
-            //    .HasOne(s => s.UserOrderProduct)
-            //    .WithOne(s => s.Product);
+            // 1 User Order - n User Order Product
+            _ = modelBuilder.Entity<UserOrder>()
+                .HasMany(s => s.UserOrderProduct)
+                .WithOne(s => s.UserOrder);
 
-            //// 1 User Order - n User Order Product
-            //_ = modelBuilder.Entity<UserOrder>()
-            //    .HasMany(s => s.UserOrderProduct)
-            //    .WithOne(s => s.UserOrder);
+            // 1 Product - 1 User Order Product
+            _ = modelBuilder.Entity<Product>()
+                .HasOne(s => s.UserOrderProduct)
+                .WithOne(s => s.Product);
+
+
         }
     }
 }
