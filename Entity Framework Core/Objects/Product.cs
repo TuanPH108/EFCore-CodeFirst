@@ -23,7 +23,7 @@ namespace Entity_Framework_Core.Objects
         public int Quantity { get; set; }
 
         [Column("discount")]
-        public double Discoint { get; set; } 
+        public double Discount { get; set; } 
 
         public UserOrderProduct? UserOrderProduct { get; set; }
     }

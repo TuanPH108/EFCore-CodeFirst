@@ -13,8 +13,6 @@ namespace Entity_Framework_Core.Objects
         [Column("quantity")]
         public int Quantity { get; set; }
 
-        [Column("date")]
-        public DateTime Date { get; set; }
         [ForeignKey("User")]
         [Column("user_id")]
         public String UserId { get; set; } = string.Empty;

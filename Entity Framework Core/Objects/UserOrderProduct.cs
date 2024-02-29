@@ -8,7 +8,7 @@ namespace Entity_Framework_Core.Objects
     {
         [Key]
         [Column("id")]
-        public int Id { get; set; }
+        public String Id { get; set; }
 
         [Column("note")]
         public String Note { get; set; } = String.Empty;
@@ -17,7 +17,7 @@ namespace Entity_Framework_Core.Objects
         public int Quantity { get; set; }
 
         [Column("discount")]
-        public double Discoint { get; set; }
+        public double Discount { get; set; }
 
         [ForeignKey("UserOrder")]
         [Column("user_order_id")]
