@@ -10,7 +10,6 @@ namespace Entity_Framework_Core
         public DbSet<UserOrder> UserOrders { get; set; }
         public DbSet<UserOrderProduct> UserOrderProducts { get; set; }
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql(@"Host=ep-sweet-unit-a1ll43ev.ap-southeast-1.aws.neon.tech;Username=ph.hoangtuan18;Password=eswJv84NGEDO;Database=PostgreeSample");
@@ -32,8 +31,6 @@ namespace Entity_Framework_Core
             _ = modelBuilder.Entity<Product>()
                 .HasOne(s => s.UserOrderProduct)
                 .WithOne(s => s.Product);
-
-
         }
     }
 }

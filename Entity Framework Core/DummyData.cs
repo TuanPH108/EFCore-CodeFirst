@@ -69,6 +69,6 @@ namespace Entity_Framework_Core
                     dbcontext.SaveChanges();
                 }
             Console.WriteLine("Insert Completed " + count + " Records Each Table....#");
-        }
+        }    
     }
 }
